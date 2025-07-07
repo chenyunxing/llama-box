@@ -372,10 +372,21 @@ index 08f3efb7b..d90921f64 100644
 +CLIP_API bool clip_has_audio_encoder(const struct clip_ctx * ctx);
 +CLIP_API bool clip_has_whisper_encoder(const struct clip_ctx * ctx);
 diff --git a/tools/mtmd/mtmd-audio.h b/tools/mtmd/mtmd-audio.h
-index b7b940aff..91d31d161 100644
+index b7b940af..6a7895b6 100644
 --- a/tools/mtmd/mtmd-audio.h
 +++ b/tools/mtmd/mtmd-audio.h
-@@ -15,6 +15,20 @@
+@@ -8,13 +8,27 @@
+ 
+ #define WHISPER_ASSERT GGML_ASSERT
+ 
+-#define WHISPER_SAMPLE_RATE 16000
+-#define WHISPER_N_FFT       400
+-#define WHISPER_HOP_LENGTH  160
+-#define WHISPER_CHUNK_SIZE  30
++#define WHISPER_SAMPLE_RATE 20000
++#define WHISPER_N_FFT       512
++#define WHISPER_HOP_LENGTH  80
++#define WHISPER_CHUNK_SIZE  20
  
  #define COMMON_SAMPLE_RATE 16000
  
